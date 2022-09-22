@@ -1,6 +1,8 @@
 export interface User{
+    _id?:string
     username: string;
     password: string;
-    userId?: string;
     email: string;
+    isAdmin?: boolean,
+    tokenId: string
 }

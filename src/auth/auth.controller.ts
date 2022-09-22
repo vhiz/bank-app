@@ -17,7 +17,7 @@ export class AuthController {
 
     @HttpCode(HttpStatus.OK)
     @Post('login')
-    login(@Body() loginDto: CreateUserDto): Promise<User>{
+    login(@Body() loginDto: CreateUserDto): Promise<{acess_token: string}>{
         return this.authService.login(loginDto)
     }
 
